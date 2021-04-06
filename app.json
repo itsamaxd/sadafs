@@ -1,0 +1,30 @@
+{
+  "name": "music bot - by ama",
+  "description": "simple discord music bot",
+  "logo": "https://cdn.discordapp.com/attachments/782742764642369536/826248470787915837/Screenshot_161.png",
+  "keywords": ["node", "discord", "youtube","music","bot"],
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "TOKEN": {
+      "description": "The token copied",
+      "required": "true"
+    },
+    "PREFIX": {
+      "description": "The prefix you want",
+      "value": "!"
+    },
+    "SOUNDCLOUD_CLIENT_ID": {
+      "description": "The client id of soundcloud.",
+      "value": "dmDh7QSlmGpzH9qQoH1YExYCGcyYeYYC",
+      "required": "false"
+    }
+  }  
+}
